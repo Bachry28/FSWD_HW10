@@ -1,0 +1,422 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0",
+      "title": "File & Design Pattern",
+      "contact": {}
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "securityDefinitions": {},
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/upload/photo/{id}": {
+        "put": {
+          "summary": "Upload Photo to Movies From Database",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "UploadPhototoMoviesFromDatabase",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "photo",
+              "in": "formData",
+              "required": true,
+              "type": "file",
+              "format": "file",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/read": {
+        "get": {
+          "summary": "Read All data Users with MVC Pattern",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "ReadAlldataUserswithMVCPattern",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/create": {
+        "post": {
+          "summary": "Create new Data Users with MVC Pattern",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "CreatenewDataUserswithMVCPattern",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CreatenewDataUserswithMVCPatternRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/update/{id}": {
+        "put": {
+          "summary": "Update data user Gender from id with MVC Pattern",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "UpdatedatauserGenderfromidwithMVCPattern",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdatedatauserGenderfromidwithMVCPatternRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/users/delete/{id}": {
+        "delete": {
+          "summary": "Delete Users From Id Users with MVC Pattern",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "DeleteUsersFromIdUserswithMVCPattern",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/movies/read": {
+        "get": {
+          "summary": "Read All Movies with MVC Pattern",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "ReadAllMovieswithMVCPattern",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/movies/create": {
+        "post": {
+          "summary": "Create Movies Data",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "CreateMoviesData",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CreateMoviesDataRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/movierepo/create": {
+        "post": {
+          "summary": "Create data movies with Pattern Repository",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "CreatedatamovieswithPatternRepository",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CreatedatamovieswithPatternRepositoryRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/movierepo/delete/{id}": {
+        "delete": {
+          "summary": "Delete Data From Movies With Pattern Repository",
+          "tags": [
+            "Misc"
+          ],
+          "operationId": "DeleteDataFromMoviesWithPatternRepository",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "format": "int32",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "CreatenewDataUserswithMVCPatternRequest": {
+        "title": "CreatenewDataUserswithMVCPatternRequest",
+        "example": {
+          "id": 101,
+          "email": null,
+          "gender": "Male",
+          "password": 1234,
+          "role": "FSWD"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "password": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "role": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "email",
+          "gender",
+          "password",
+          "role"
+        ]
+      },
+      "UpdatedatauserGenderfromidwithMVCPatternRequest": {
+        "title": "UpdatedatauserGenderfromidwithMVCPatternRequest",
+        "example": {
+          "gender": "female"
+        },
+        "type": "object",
+        "properties": {
+          "gender": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "gender"
+        ]
+      },
+      "CreateMoviesDataRequest": {
+        "title": "CreateMoviesDataRequest",
+        "example": {
+          "id": 101,
+          "title": null,
+          "genres": "No Name",
+          "years": 2023,
+          "photo": "null"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "genres": {
+            "type": "string"
+          },
+          "years": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "photo": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "genres",
+          "years",
+          "photo"
+        ]
+      },
+      "CreatedatamovieswithPatternRepositoryRequest": {
+        "title": "CreatedatamovieswithPatternRepositoryRequest",
+        "example": {
+          "id": 100,
+          "title": null,
+          "genres": "No Name",
+          "years": 2023,
+          "photo": "null"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "genres": {
+            "type": "string"
+          },
+          "years": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "photo": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "genres",
+          "years",
+          "photo"
+        ]
+      }
+    },
+    "tags": [
+      {
+        "name": "Misc",
+        "description": ""
+      }
+    ]
+  }
